@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package tetris;
+package IO;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import tetris3.pkg0.Partida;
 
 /**
  *
@@ -41,7 +42,7 @@ public class FI {
             res = (Partida)reader.readObject();
             
         } catch (Exception ex) {
-            ex.printStackTrace();
+            return res;
         }
         return res;
     }
